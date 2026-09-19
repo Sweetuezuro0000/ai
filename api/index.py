@@ -364,6 +364,10 @@ def set_mode_command(message):
         InlineKeyboardButton("🌐 Translator", callback_data="setmode_translator"),
         InlineKeyboardButton("📚 Teacher", callback_data="setmode_teacher")
     )
+    markup.add(
+        InlineKeyboardButton("🔥 Smexy / Savage", callback_data="setmode_smexy"),
+        InlineKeyboardButton("❤️ GF Mode", callback_data="setmode_gf")
+    )
     
     current = get_user_mode(message.from_user.id)
     bot.reply_to(message, f"🎭 **Select AI Mode**\n\nCurrently active: **{current.capitalize()} Mode**", reply_markup=markup, parse_mode="Markdown")

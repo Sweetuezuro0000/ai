@@ -31,7 +31,7 @@ if not API_KEYS:
     ]
 
 COMPANY_NAME = "Paraweb AI"
-MODEL_NAME = 'gemini-2.5-flash'
+MODEL_NAME = 'gemini-3.6-flash'
 
 SYSTEM_PROMPT = f"""
 You are the official AI assistant of {COMPANY_NAME}.
@@ -135,7 +135,7 @@ def generate_ai_response(prompt_or_contents):
             print(f"Unexpected AI Error: {e}")
             continue
 
-    return "😔 Daily/Rate limit exhausted across all configured API keys. Try again later!"
+    return "😔 Daily/Rate limit exhausted. Try again later!"
 
 # ==========================================
 # 4. FORCESUB & PROCESS LOGIC
